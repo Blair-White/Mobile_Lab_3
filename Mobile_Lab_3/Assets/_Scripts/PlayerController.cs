@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //public BulletManager bulletManager;
+    public BulletManager bulletManager;
 
     [Header("Boundary Check")]
     public float horizontalBoundary;
@@ -35,17 +35,17 @@ public class PlayerController : MonoBehaviour
     {
         _Move();
         _CheckBounds();
-       // _FireBullet();
+        _FireBullet();
     }
 
-    //private void _FireBullet()
-    //{
-    //    // delay bullet firing 
-    //    if (Time.frameCount % 60 == 0 && bulletManager.HasBullets())
-    //    {
-    //        bulletManager.GetBullet(transform.position);
-    //    }
-    //}
+    private void _FireBullet()
+    {
+        // delay bullet firing 
+        if (Time.frameCount % 60 == 0 && bulletManager.HasBullets())
+        {
+            bulletManager.GetBullet(transform.position);
+        }
+    }
 
     private void _Move()
     {
