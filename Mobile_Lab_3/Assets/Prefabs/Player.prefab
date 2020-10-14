@@ -117,8 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b715ea23ce13ab147af51f9eed85ef7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletManager: {fileID: 0}
   horizontalBoundary: 1.9
   horizontalSpeed: 0.01
   maxSpeed: 1
   horizontalTValue: 0.01
-  fireDelay: 0
+  fireDelay: 1
